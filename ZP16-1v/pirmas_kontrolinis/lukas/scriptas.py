@@ -19,7 +19,7 @@ for info in x:
     kiekis = info[1]
     rezultatas["visu_parduotuviu_inventorius"][preke] += kiekis
 
-with open('rezultatai.json', 'w') as outfile:
+with open('rezultatai.json', 'w', encoding='utf-8') as outfile:
     json.dump(rezultatas, outfile)
 
 if __name__ == '__main__':
