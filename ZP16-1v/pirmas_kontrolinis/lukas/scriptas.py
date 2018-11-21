@@ -1,6 +1,6 @@
 import json
 
-with open("Lukas_inventorius.json", 'r', encoding='utf-8') as file:
+with open('Lukas_inventorius.json', 'r', encoding='utf-8') as file:
     inventorius = json.load(file)
 
 x = []
@@ -20,7 +20,7 @@ for info in x:
     rezultatas["visu_parduotuviu_inventorius"][preke] += kiekis
 
 with open('rezultatai.json', 'w', encoding='utf-8') as outfile:
-    json.dump(rezultatas, outfile)
+    json.dump(rezultatas, outfile, indent=2, ensure_ascii=False)
 
 if __name__ == '__main__':
     pass
